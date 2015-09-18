@@ -1,0 +1,153 @@
+@import "../../bower_components/material-design-lite/src/variables";
+@import "../../bower_components/material-design-lite/src/mixins";
+
+$selectfield-font-size: 16px !default;
+$selectfield-padding: 4px !default;
+$selectfield-vertical-spacing: 20px !default;
+
+$selectfield-floating-label-fontsize: 12px !default;
+
+$selectfield-background-color: transparent !default;
+$selectfield-label-color: unquote("rgba(#{$color-black}, 0.26)") !default;
+$selectfield-bottom-border-color: unquote("rgba(#{$color-black}, 0.12)") !default;
+$selectfield-highlight-color: unquote("rgb(#{$color-primary})") !default;
+$selectfield-disabled-color: $selectfield-bottom-border-color !default;
+$selectfield-disabled-text-color: $selectfield-label-color !default;
+$selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
+
+// The container for the whole component.
+.mdl-selectfield {
+  position: relative;
+  font-size: $selectfield-font-size;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 300px;
+  max-width: 100%;
+  margin: 0;
+  padding: $selectfield-vertical-spacing 0;
+}
+
+// Optional class to align right.
+.mdl-selectfield--align-right {
+  text-align: right;
+}
+
+// Optional class to display at full width.
+.mdl-selectfield--full-width {
+  width: 100%;
+}
+
+// Styling for the select element.
+.mdl-selectfield__select {
+  display: block;
+  width: 100%;
+  padding: $selectfield-padding 0;
+  margin: 0;
+  color: inherit;
+  background: $selectfield-background-color;
+  font-size: $selectfield-font-size;
+  text-align: left;
+  color: inherit;
+  border: none;
+  border-bottom: 1px solid $selectfield-bottom-border-color;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  .mdl-selectfield.is-focused & {
+    outline: none;
+  }
+
+  .mdl-selectfield.is-invalid & {
+    border-color: $selectfield-error-color;
+    box-shadow: none;
+  }
+
+  fieldset[disabled] .mdl-selectfield &, .mdl-selectfield.is-disabled & {
+    background-color: transparent;
+    border-bottom: 1px dotted $selectfield-disabled-color;
+    color: $selectfield-disabled-text-color;
+  }
+}
+
+// Styling for the label / floating label.
+.mdl-selectfield__label {
+  bottom: 0;
+  color: $selectfield-label-color;
+  font-size: $selectfield-font-size;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  top: ($selectfield-padding + $selectfield-vertical-spacing);
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+
+  .mdl-selectfield.is-dirty & {
+    visibility: hidden;
+  }
+
+  // Floating Label
+  .mdl-selectfield--floating-label & {
+    @include material-animation-default();
+  }
+
+  fieldset[disabled] .mdl-selectfield &,
+  .mdl-selectfield.is-disabled.is-disabled & {
+    color: $selectfield-disabled-text-color;
+  }
+
+  .mdl-selectfield--floating-label.is-focused &,
+  .mdl-selectfield--floating-label.is-dirty & {
+    color: $selectfield-highlight-color;
+    font-size : $selectfield-floating-label-fontsize;
+    top: $selectfield-vertical-spacing - ($selectfield-floating-label-fontsize + $selectfield-padding);
+    visibility: visible;
+  }
+
+  .mdl-selectfield--floating-label.is-invalid & {
+    color: $selectfield-error-color;
+    font-size: $selectfield-floating-label-fontsize;
+  }
+
+  // The after label is the colored underline for the TextField.
+  &:after {
+    background-color: $selectfield-highlight-color;
+    bottom: $selectfield-vertical-spacing;
+    content: '';
+    height: 2px;
+    left: 45%;
+    position: absolute;
+    @include material-animation-default();
+    visibility: hidden;
+    width: 10px;
+  }
+
+  .mdl-selectfield.is-focused &:after {
+    left: 0;
+    visibility: visible;
+    width: 100%;
+  }
+
+  .mdl-selectfield.is-invalid &:after {
+    background-color: $selectfield-error-color;
+  }
+}
+
+// SelectField Error.
+.mdl-selectfield__error {
+  color: $selectfield-error-color;
+  position: absolute;
+  font-size: $selectfield-floating-label-fontsize;
+  margin-top: 3px;
+  visibility: hidden;
+  display: block;
+
+  .mdl-selectfield.is-invalid & {
+    visibility: visible;
+  }
+}
