@@ -7,7 +7,7 @@
   ],
   "description": "mdl-selectfield for material-design-lite",
   "main": [
-    "mdl-select.min.css",
+    "mdl-selectfield.min.css",
     "mdl-selectfield.min.js"
   ],
   "keywords": [
