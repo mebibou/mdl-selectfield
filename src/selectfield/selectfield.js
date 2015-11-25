@@ -108,7 +108,7 @@
   MaterialSelectfield.prototype['checkDirty'] = MaterialSelectfield.prototype.checkDirty;
 
   /**
-   * Enable text field.
+   * Enable select field.
    *
    * @public
    */
@@ -119,7 +119,7 @@
   MaterialSelectfield.prototype['disable'] = MaterialSelectfield.prototype.disable;
 
   /**
-   * Enable text field.
+   * Enable select field.
    *
    * @public
    */
@@ -130,7 +130,7 @@
   MaterialSelectfield.prototype['enable'] = MaterialSelectfield.prototype.enable;
 
   /**
-   * Update text field value.
+   * Update select field value.
    *
    * @param {string} value The value to which to set the control (optional).
    * @public
@@ -155,7 +155,7 @@
         this.boundUpdateClassesHandler = this.updateClasses_.bind(this);
         this.boundFocusHandler = this.onFocus_.bind(this);
         this.boundBlurHandler = this.onBlur_.bind(this);
-        this.select_.addEventListener('input', this.boundUpdateClassesHandler);
+        this.select_.addEventListener('change', this.boundUpdateClassesHandler);
         this.select_.addEventListener('focus', this.boundFocusHandler);
         this.select_.addEventListener('blur', this.boundBlurHandler);
 
@@ -171,7 +171,7 @@
    * @private
    */
   MaterialSelectfield.prototype.mdlDowngrade_ = function() {
-    this.select_.removeEventListener('input', this.boundUpdateClassesHandler);
+    this.select_.removeEventListener('change', this.boundUpdateClassesHandler);
     this.select_.removeEventListener('focus', this.boundFocusHandler);
     this.select_.removeEventListener('blur', this.boundBlurHandler);
   };
