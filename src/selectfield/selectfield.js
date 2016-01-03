@@ -43,7 +43,7 @@
   };
 
   /**
-   * Handle reset event from out side.
+   * Handle reset event from outside.
    *
    * @param {Event} event The event that fired.
    * @private
@@ -155,9 +155,11 @@
         this.boundUpdateClassesHandler = this.updateClasses_.bind(this);
         this.boundFocusHandler = this.onFocus_.bind(this);
         this.boundBlurHandler = this.onBlur_.bind(this);
+        this.boundResetHandler = this.onReset_.bind(this);
         this.select_.addEventListener('change', this.boundUpdateClassesHandler);
         this.select_.addEventListener('focus', this.boundFocusHandler);
         this.select_.addEventListener('blur', this.boundBlurHandler);
+        this.select_.addEventListener('reset', this.boundResetHandler);
 
         this.updateClasses_();
         this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
@@ -174,6 +176,7 @@
     this.select_.removeEventListener('change', this.boundUpdateClassesHandler);
     this.select_.removeEventListener('focus', this.boundFocusHandler);
     this.select_.removeEventListener('blur', this.boundBlurHandler);
+    this.select_.removeEventListener('reset', this.boundResetHandler);
   };
 
   // The component registers itself. It can assume componentHandler is available
