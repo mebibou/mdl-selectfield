@@ -161,6 +161,52 @@
         this.select_.addEventListener('blur', this.boundBlurHandler);
         this.select_.addEventListener('reset', this.boundResetHandler);
 
+        if(typeof(MaterialMenu) == 'function') {
+
+          var that = this;
+          var placeholder_id = 'plc-' + (new Date().getTime());
+          var placeholder = document.createElement('div');
+          placeholder.id = placeholder_id;
+          placeholder.classList.add('mdl-selectfield__placeholder');
+          placeholder.innerHTML = '<i class="material-icons" tabindex="-1">arrow_drop_down</i>';
+          placeholder.addEventListener('click', function() { that.select_.focus() });
+          this.element_.appendChild(placeholder);
+
+          this.options_ = this.select_.querySelectorAll('option');
+
+          if (this.options_.length) {
+
+            var ul = document.createElement('ul');
+            ul.classList.add('mdl-menu');
+            // ul.classList.add('mdl-menu--top-right');
+            ul.classList.add('mdl-js-menu');
+            ul.classList.add('mdl-js-ripple-effect');
+            ul.tabIndex = '-1';
+            ul.setAttribute('for' , placeholder_id);
+            ul.addEventListener('mousewheel', function(e) {
+              if((this.scrollTop === (this.scrollHeight - this.offsetHeight) && e.wheelDelta < 0) || (this.scrollTop === 0 && e.wheelDelta > 0)) {
+                e.preventDefault();
+              }
+            });
+            for (var i = 0; i < this.options_.length; i++) {
+              var item = this.options_[i]
+                ,itemText = (item.textContent || '').toUpperCase().replace(/( )|(\n)/g, "");
+              var li = document.createElement('li');
+              li.textContent = item.textContent;
+              li.classList.add('mdl-menu__item');
+              li.setAttribute('data-value', i);
+              li.tabIndex = '-1';
+              li.addEventListener('mousedown', function() {
+                that.select_.selectedIndex = this.getAttribute('data-value');
+                that.updateClasses_();
+              });
+              ul.appendChild(li);
+              this.element_.appendChild(ul);
+            }
+          }
+          componentHandler.upgradeDom('MaterialMenu');
+        }
+
         this.updateClasses_();
         this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
       }

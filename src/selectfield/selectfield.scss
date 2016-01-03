@@ -25,6 +25,31 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   max-width: 100%;
   margin: 0;
   padding: $selectfield-vertical-spacing 0;
+
+  .mdl-menu__container {
+    max-height: 256px;
+    min-width: 100%;
+    top: $selectfield-vertical-spacing - 8px !important;
+  }
+  &.mdl-selectfield--floating-label .mdl-menu__container {
+    top: $selectfield-vertical-spacing + 4px !important;
+  }
+  .mdl-menu__outline {
+    max-height: 256px;
+    transform-origin: 50% 0;
+  } 
+  .mdl-menu {
+    min-width: 100%;
+    max-height: 240px;
+    outline: 0;
+    overflow-y: auto;
+    width: auto !important;
+
+    &.is-animating {
+      overflow: hidden;
+    }
+  }
+
 }
 
 // Optional class to align right.
@@ -149,5 +174,20 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
 
   .mdl-selectfield.is-invalid & {
     visibility: visible;
+  }
+}
+
+.mdl-selectfield__placeholder {
+  bottom: $selectfield-vertical-spacing;
+  cursor: pointer;
+  color: $selectfield-label-color;
+  left: 0;
+  padding: 2px 0;
+  position: absolute;
+  text-align: right;
+  top: $selectfield-vertical-spacing;
+  width: 100%;
+  & > i {
+    outline: 0;
   }
 }
