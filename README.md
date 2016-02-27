@@ -1,6 +1,8 @@
 # mdl-selectfield
 Material Design Lite selectfield component (https://github.com/google/material-design-lite)
 
+[![bitHound Overall Score](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/score.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield) [![bitHound Dependencies](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/dependencies.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield/master/dependencies/npm) [![bitHound Dev Dependencies](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/devDependencies.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield/master/dependencies/npm) [![bitHound Code](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/code.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield)
+
 ## Live Example
 
 Check out the [CodePen](http://codepen.io/mebibou/pen/pjEjOv)
