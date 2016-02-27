@@ -1,5 +1,6 @@
 {
   "preset": "google",
+  "esnext": true,
   "disallowSpacesInAnonymousFunctionExpression": null,
   "validateLineBreaks": "LF",
   "validateIndentation": 2,
@@ -8,8 +9,6 @@
   "validateQuoteMarks": "'",
   "requireDotNotation": false,
   "requireCamelCaseOrUpperCaseIdentifiers": null,
-  "additionalRules": ["utils/jscs-rules/*.js"],
-  "closureCamelCase": true,
   "jsDoc": {
     "checkAnnotations": {
       "preset": "closurecompiler",

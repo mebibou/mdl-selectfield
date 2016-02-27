@@ -1,6 +1,13 @@
 (function() {
   'use strict';
 
+  /**
+   * Class constructor for Select field MDL component.
+   * Implements custom MDL component design pattern not defined yet.
+   *
+   * @constructor
+   * @param {HTMLElement} element The element that will be upgraded.
+   */
   var MaterialSelectfield = function MaterialSelectfield(element) {
     this.element_ = element;
     // Initialize instance.
@@ -187,5 +194,4 @@
     cssClass: 'mdl-js-selectfield',
     widget: true
   });
-
 })();
