@@ -1,7 +1,15 @@
 # mdl-selectfield
 Material Design Lite selectfield component (https://github.com/google/material-design-lite)
 
-[![bitHound Overall Score](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/score.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield) [![bitHound Dependencies](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/dependencies.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield/master/dependencies/npm) [![bitHound Dev Dependencies](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/devDependencies.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield/master/dependencies/npm) [![bitHound Code](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/code.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield)
+[![Bower Version](https://img.shields.io/bower/v/mdl-selectfield.svg)](https://github.com/mebibou/mdl-selectfield)
+[![NPM Version](https://img.shields.io/npm/v/mdl-selectfield.svg)](https://www.npmjs.com/package/mdl-selectfield)
+[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](https://github.com/mebibou/mdl-selectfield/blob/master/LICENSE)
+
+[![bitHound Overall Score](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/score.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield)
+[![bitHound Dependencies](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/dependencies.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/devDependencies.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield/master/dependencies/npm)
+[![bitHound Code](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/code.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield)
+
 
 ## Live Example
 
