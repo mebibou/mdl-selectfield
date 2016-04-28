@@ -2,16 +2,21 @@
   'use strict';
 
   var gulp = require('gulp'),
+      concat = require('gulp-concat'),
       rename = require('gulp-rename'),
       sass = require('gulp-sass'),
       sourcemaps = require('gulp-sourcemaps'),
-      sassFiles = ['./src/**/*.scss'],
+      sassFiles = [
+        './src/global.scss',
+        './src/**/*.scss'
+      ],
       uglify = require('gulp-uglifyjs'),
       jsFiles = ['src/**/*.js'];
 
   gulp.task('sass', function () {
     gulp
       .src(sassFiles)
+      .pipe(concat('file.scss'))
       .pipe(sourcemaps.init())
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
       .pipe(rename(function(path) {
