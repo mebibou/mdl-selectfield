@@ -1,3 +1,14 @@
+<a name="1.0.0"></a>
+# 1.0.0 (2016-04-28)
+
+### Breaking Changes
+
+* distribution files (compress and non-compressed) are now located under `dist` folder
+
+### New Features
+
+* add ability to use source scc file for custom variables (relates to [#13](https://github.com/mebibou/mdl-selectfield/issues/13) and [#16](https://github.com/mebibou/mdl-selectfield/issues/16))
+
 <a name="0.0.3"></a>
 # 0.0.3 (2015-11-24)
 

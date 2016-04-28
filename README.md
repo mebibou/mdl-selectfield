@@ -10,10 +10,33 @@ Material Design Lite selectfield component (https://github.com/google/material-d
 [![bitHound Dev Dependencies](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/devDependencies.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield/master/dependencies/npm)
 [![bitHound Code](https://www.bithound.io/github/mebibou/mdl-selectfield/badges/code.svg)](https://www.bithound.io/github/mebibou/mdl-selectfield)
 
+> A custom implementation of a selectfield component for [Material Design Lite](https://github.com/google/material-design-lite)
 
 ## Live Example
 
 Check out the [CodePen](http://codepen.io/mebibou/pen/pjEjOv)
+
+## Install
+
+Via bower:
+
+````
+bower install mdl-selectfield
+````
+
+Or via npm:
+
+````
+npm install mdl-selectfield
+````
+
+Then include in your html:
+
+````
+<link rel="stylesheet" href="./bower_components/mdl-selectfield/dist/mdl-selectfield.min.css">
+...
+<script src="./bower_components/mdl-selectfield/dist/mdl-selectfield.min.js"></script>
+````
 
 ## Basic use
 To use any MDL component, you must include the minified CSS and JavaScript files using standard relative-path references in the `<head>` section of the page, as described in the MDL Introduction.
