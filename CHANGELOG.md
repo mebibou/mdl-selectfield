@@ -1,3 +1,10 @@
+<a name="1.0.1"></a>
+# 0.0.3 (2016-05-02)
+
+### Bug Fixes
+
+* add missing dist folder, fixes [#17](https://github.com/mebibou/mdl-selectfield/issues/17)
+
 <a name="1.0.0"></a>
 # 1.0.0 (2016-04-28)
 

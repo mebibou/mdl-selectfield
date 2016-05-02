@@ -5,3 +5,4 @@ gulp-cache
 docs/out
 .publish
 bower_components/
+*.log
