@@ -20,7 +20,7 @@
   };
 
   MaterialSelectfield.prototype.CssClasses_ = {
-    LABEL: 'mdl-selectield__label',
+    LABEL: 'mdl-selectfield__label',
     SELECT: 'mdl-selectfield__select',
     IS_DIRTY: 'is-dirty',
     IS_FOCUSED: 'is-focused',

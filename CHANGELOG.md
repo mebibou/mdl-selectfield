@@ -1,5 +1,12 @@
+<a name="1.0.2"></a>
+# 1.0.2 (2016-06-08)
+
+### Bug Fixes
+
+* fix issue with wrong class name for label, closes [#19](https://github.com/mebibou/mdl-selectfield/issues/19)
+
 <a name="1.0.1"></a>
-# 0.0.3 (2016-05-02)
+# 1.0.1 (2016-05-02)
 
 ### Bug Fixes
 
