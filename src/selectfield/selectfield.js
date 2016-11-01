@@ -167,6 +167,11 @@
         this.select_.addEventListener('focus', this.boundFocusHandler);
         this.select_.addEventListener('blur', this.boundBlurHandler);
         this.select_.addEventListener('reset', this.boundResetHandler);
+        
+        var icon = document.createElement('div');
+        icon.className = 'mdl-selectfield__icon';
+        icon.innerHTML = '<i class="material-icons" tabindex="-1">arrow_drop_down</i>';
+        this.element_.appendChild(icon);
 
         this.updateClasses_();
         this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
