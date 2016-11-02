@@ -267,3 +267,17 @@
   display: block; }
   .mdl-selectfield.is-invalid .mdl-selectfield__error {
     visibility: visible; }
+
+.mdl-selectfield__icon {
+  bottom: 20px;
+  cursor: pointer;
+  color: rgba(0,0,0, 0.26);
+  left: 0;
+  padding: 4px 0;
+  position: absolute;
+  text-align: right;
+  top: 20px;
+  width: 100%;
+  pointer-events: none; }
+  .mdl-selectfield__icon > i {
+    outline: 0; }
