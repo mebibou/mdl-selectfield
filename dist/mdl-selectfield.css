@@ -199,6 +199,8 @@
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none; }
+  .mdl-selectfield__select::-ms-expand {
+    display: none; }
   .mdl-selectfield.is-focused .mdl-selectfield__select {
     outline: none; }
   .mdl-selectfield.is-invalid .mdl-selectfield__select {
