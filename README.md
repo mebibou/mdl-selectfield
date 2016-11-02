@@ -124,3 +124,16 @@ Select field with a standard label, and error message.
   <span class="mdl-textfield__error">Digits only</span>
 </div>
 ```
+Select field with a floating label and icon.
+```html
+<div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+  <select id="gender" class="mdl-selectfield__select">
+    <option value=""></option>
+    <option value="option1">option 1</option>
+    <option value="option2">option 2</option>
+  </select>
+  <div class="mdl-selectfield__icon"><i class="material-icons">arrow_drop_down</i></div>
+  <label class="mdl-selectfield__label" for="gender">User gender</label>
+  <span class="mdl-selectfield__error">Select a value</span>
+</div>
+```

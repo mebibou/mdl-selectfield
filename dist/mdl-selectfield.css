@@ -198,7 +198,16 @@
   border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none; }
+  .mdl-selectfield__select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000000; }
+  .mdl-selectfield__select:focus::-ms-value {
+    background-color: inherit;
+    color: inherit; }
+  .mdl-selectfield__select::-ms-expand {
+    display: none; }
   .mdl-selectfield.is-focused .mdl-selectfield__select {
     outline: none; }
   .mdl-selectfield.is-invalid .mdl-selectfield__select {
@@ -267,3 +276,17 @@
   display: block; }
   .mdl-selectfield.is-invalid .mdl-selectfield__error {
     visibility: visible; }
+
+.mdl-selectfield__icon {
+  bottom: 20px;
+  cursor: pointer;
+  color: rgba(0,0,0, 0.26);
+  left: 0;
+  padding: 2px 0;
+  position: absolute;
+  text-align: right;
+  top: 20px;
+  width: 100%;
+  pointer-events: none; }
+  .mdl-selectfield__icon > i {
+    outline: 0; }

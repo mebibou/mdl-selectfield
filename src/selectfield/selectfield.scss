@@ -50,7 +50,22 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
+
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000000;
+  }
+
+  &:focus::-ms-value {
+    background-color: inherit;
+    color: inherit;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
 
   .mdl-selectfield.is-focused & {
     outline: none;
@@ -146,5 +161,22 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
 
   .mdl-selectfield.is-invalid & {
     visibility: visible;
+  }
+}
+
+// SelectField Icon
+.mdl-selectfield__icon {
+  bottom: $selectfield-vertical-spacing;
+  cursor: pointer;
+  color: $selectfield-label-color;
+  left: 0;
+  padding: 2px 0;
+  position: absolute;
+  text-align: right;
+  top: $selectfield-vertical-spacing;
+  width: 100%;
+  pointer-events: none;
+  & > i {
+    outline: 0;
   }
 }

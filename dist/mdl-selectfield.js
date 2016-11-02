@@ -167,7 +167,6 @@
         this.select_.addEventListener('focus', this.boundFocusHandler);
         this.select_.addEventListener('blur', this.boundBlurHandler);
         this.select_.addEventListener('reset', this.boundResetHandler);
-
         this.updateClasses_();
         this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
       }
