@@ -203,16 +203,16 @@
   .mdl-selectfield__select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #000000; }
-  .mdl-selectfield.is-focused .mdl-selectfield__select {
-    outline: none; }
   .mdl-selectfield__select:focus::-ms-value {
     background-color: inherit;
     color: inherit; }
+  .mdl-selectfield__select::-ms-expand {
+    display: none; }
+  .mdl-selectfield.is-focused .mdl-selectfield__select {
+    outline: none; }
   .mdl-selectfield.is-invalid .mdl-selectfield__select {
     border-color: rgb(222, 50, 38);
     box-shadow: none; }
-  .mdl-selectfield__select::-ms-expand {
-    display: none; }
   fieldset[disabled] .mdl-selectfield .mdl-selectfield__select, .mdl-selectfield.is-disabled .mdl-selectfield__select {
     background-color: transparent;
     border-bottom: 1px dotted rgba(0,0,0, 0.12);
