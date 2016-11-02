@@ -51,6 +51,10 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
+ 
+   &::-ms-expand {
+    display: none;
+  }
 
   .mdl-selectfield.is-focused & {
     outline: none;
