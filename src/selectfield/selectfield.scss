@@ -58,22 +58,22 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
     text-shadow: 0 0 0 #000000;
   }
 
-  .mdl-selectfield.is-focused & {
-    outline: none;
-  }
-
   &:focus::-ms-value {
     background-color: inherit;
     color: inherit;
   }
 
+  &::-ms-expand {
+    display: none;
+  }
+
+  .mdl-selectfield.is-focused & {
+    outline: none;
+  }
+
   .mdl-selectfield.is-invalid & {
     border-color: $selectfield-error-color;
     box-shadow: none;
-  }
-
-  &::-ms-expand {
-    display: none;
   }
 
   fieldset[disabled] .mdl-selectfield &, .mdl-selectfield.is-disabled & {
