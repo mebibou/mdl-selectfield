@@ -1,3 +1,10 @@
+<a name="1.0.3"></a>
+# 1.0.3 (2016-11-02)
+
+### Bug Fixes
+
+* fix issue with "is-invalid" being removed if already present when loading component, closes [#25](https://github.com/mebibou/mdl-selectfield/issues/25)
+
 <a name="1.0.2"></a>
 # 1.0.2 (2016-06-08)
 

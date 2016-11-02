@@ -192,12 +192,12 @@
   background: transparent;
   font-size: 16px;
   text-align: left;
-  color: inherit;
   border: none;
   border-bottom: 1px solid rgba(0,0,0, 0.12);
   border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none; }
   .mdl-selectfield.is-focused .mdl-selectfield__select {
     outline: none; }

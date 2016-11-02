@@ -44,12 +44,12 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   background: $selectfield-background-color;
   font-size: $selectfield-font-size;
   text-align: left;
-  color: inherit;
   border: none;
   border-bottom: 1px solid $selectfield-bottom-border-color;
   border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
 
   .mdl-selectfield.is-focused & {

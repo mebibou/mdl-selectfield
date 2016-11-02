@@ -9,6 +9,7 @@
   "validateQuoteMarks": "'",
   "requireDotNotation": false,
   "requireCamelCaseOrUpperCaseIdentifiers": null,
+  "closureCamelCase": true,
   "jsDoc": {
     "checkAnnotations": {
       "preset": "closurecompiler",
