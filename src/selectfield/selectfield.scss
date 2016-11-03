@@ -158,14 +158,15 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   bottom: $selectfield-vertical-spacing;
   cursor: pointer;
   color: $selectfield-label-color;
-  left: 0;
   padding: $selectfield-padding 0;
   position: absolute;
-  text-align: right;
   top: $selectfield-vertical-spacing;
-  width: 100%;
+  right: 0;
   pointer-events: none;
-  & > i {
+    & > i {
     outline: 0;
+  }
+  .mdl-selectfield.is-dirty & {
+    color: inherit;
   }
 }
