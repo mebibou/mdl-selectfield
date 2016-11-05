@@ -283,3 +283,8 @@
     outline: 0; }
   .mdl-selectfield.is-dirty .mdl-selectfield__icon {
     color: inherit; }
+  fieldset[disabled] .mdl-selectfield .mdl-selectfield__icon,
+  .mdl-selectfield.is-disabled.is-disabled .mdl-selectfield__icon {
+    color: rgba(0,0,0, 0.26); }
+  .mdl-selectfield--floating-label.is-invalid .mdl-selectfield__icon {
+    color: rgb(222, 50, 38); }

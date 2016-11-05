@@ -51,8 +51,8 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
- 
-   &::-ms-expand {
+
+  &::-ms-expand {
     display: none;
   }
 
@@ -163,10 +163,21 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   top: $selectfield-vertical-spacing;
   right: 0;
   pointer-events: none;
-    & > i {
+
+  & > i {
     outline: 0;
   }
+
   .mdl-selectfield.is-dirty & {
     color: inherit;
+  }
+
+  fieldset[disabled] .mdl-selectfield &,
+  .mdl-selectfield.is-disabled.is-disabled & {
+    color: $selectfield-disabled-text-color;
+  }
+
+  .mdl-selectfield--floating-label.is-invalid & {
+    color: $selectfield-error-color;
   }
 }
