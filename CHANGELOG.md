@@ -1,3 +1,10 @@
+<a name="1.0.4"></a>
+# 1.0.4 (2016-11-05)
+
+### New Features
+
+* added icon on selectfield, closes [#26](https://github.com/mebibou/mdl-selectfield/issues/26)
+
 <a name="1.0.3"></a>
 # 1.0.3 (2016-11-02)
 
@@ -28,7 +35,7 @@
 
 ### New Features
 
-* add ability to use source scc file for custom variables (relates to [#13](https://github.com/mebibou/mdl-selectfield/issues/13) and [#16](https://github.com/mebibou/mdl-selectfield/issues/16))
+* add ability to use source scss file for custom variables (relates to [#13](https://github.com/mebibou/mdl-selectfield/issues/13) and [#16](https://github.com/mebibou/mdl-selectfield/issues/16))
 
 <a name="0.0.3"></a>
 # 0.0.3 (2015-11-24)
