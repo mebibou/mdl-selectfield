@@ -1,5 +1,6 @@
 $selectfield-font-size: 16px !default;
 $selectfield-padding: 4px !default;
+$selectfield-vertical-spacing: 20px !default;
 
 $selectfield-floating-label-fontsize: 12px !default;
 
@@ -11,6 +12,34 @@ $selectfield-disabled-color: $selectfield-bottom-border-color !default;
 $selectfield-disabled-text-color: $selectfield-label-color !default;
 $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
 
+
+
+
+
+body .mdl-selectfield {
+  //width: 150px;
+  //padding: 0;
+}
+
+body .mdl-selectfield .mdl-selectfield__icon {
+  //padding: 0;
+  //bottom: 0;
+  //top: 0;
+}
+
+body .mdl-selectfield .mdl-selectfield__label {
+  //top: 0;
+  line-height: 27px;
+}
+
+body .mdl-selectfield .mdl-selectfield__label::after {
+  //bottom: 0;
+}
+
+
+
+
+
 // The container for the whole component.
 .mdl-selectfield {
   position: relative;
@@ -21,6 +50,11 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   max-width: 100%;
   margin: 20px 0;
   padding: 0;
+
+  &.mdl-selectfield--floating-label {
+    padding: $selectfield-vertical-spacing 0;
+    margin: 0;
+  }
 }
 
 // Optional class to align right.
@@ -94,6 +128,8 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   // Floating Label
   .mdl-selectfield--floating-label & {
     @include material-animation-default();
+
+    top: ($selectfield-padding + $selectfield-vertical-spacing);
   }
 
   fieldset[disabled] .mdl-selectfield &,
@@ -105,7 +141,7 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   .mdl-selectfield--floating-label.is-dirty & {
     color: $selectfield-highlight-color;
     font-size : $selectfield-floating-label-fontsize;
-    top: $selectfield-floating-label-fontsize;
+    top: $selectfield-vertical-spacing - ($selectfield-floating-label-fontsize + $selectfield-padding);
     visibility: visible;
   }
 
@@ -125,6 +161,10 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
     @include material-animation-default();
     visibility: hidden;
     width: 10px;
+  }
+
+  .mdl-selectfield--floating-label &:after {
+    bottom: $selectfield-vertical-spacing;
   }
 
   .mdl-selectfield.is-focused &:after {
@@ -176,7 +216,13 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
     color: $selectfield-disabled-text-color;
   }
 
-  .mdl-selectfield--floating-label.is-invalid & {
+  .mdl-selectfield--floating-label & {
+    padding: $selectfield-padding 0;
+    top: $selectfield-vertical-spacing;
+    bottom: $selectfield-vertical-spacing;
+  }
+
+  &.is-invalid & {
     color: $selectfield-error-color;
   }
 }

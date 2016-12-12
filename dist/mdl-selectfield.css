@@ -167,6 +167,9 @@
 /* Shadows */
 /* Animations */
 /* Dialog */
+body .mdl-selectfield .mdl-selectfield__label {
+  line-height: 27px; }
+
 .mdl-selectfield {
   position: relative;
   font-size: 16px;
@@ -176,6 +179,9 @@
   max-width: 100%;
   margin: 20px 0;
   padding: 0; }
+  .mdl-selectfield.mdl-selectfield--floating-label {
+    padding: 20px 0;
+    margin: 0; }
 
 .mdl-selectfield--align-right {
   text-align: right; }
@@ -229,7 +235,8 @@
     visibility: hidden; }
   .mdl-selectfield--floating-label .mdl-selectfield__label {
     transition-duration: 0.2s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    top: 24px; }
   fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
   .mdl-selectfield.is-disabled.is-disabled .mdl-selectfield__label {
     color: rgba(0,0,0, 0.26); }
@@ -237,7 +244,7 @@
   .mdl-selectfield--floating-label.is-dirty .mdl-selectfield__label {
     color: rgb(63,81,181);
     font-size: 12px;
-    top: 12px;
+    top: 4px;
     visibility: visible; }
   .mdl-selectfield--floating-label.is-invalid .mdl-selectfield__label {
     color: rgb(222, 50, 38);
@@ -253,6 +260,8 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     visibility: hidden;
     width: 10px; }
+  .mdl-selectfield--floating-label .mdl-selectfield__label:after {
+    bottom: 20px; }
   .mdl-selectfield.is-focused .mdl-selectfield__label:after {
     left: 0;
     visibility: visible;
@@ -286,5 +295,9 @@
   fieldset[disabled] .mdl-selectfield .mdl-selectfield__icon,
   .mdl-selectfield.is-disabled.is-disabled .mdl-selectfield__icon {
     color: rgba(0,0,0, 0.26); }
-  .mdl-selectfield--floating-label.is-invalid .mdl-selectfield__icon {
+  .mdl-selectfield--floating-label .mdl-selectfield__icon {
+    padding: 4px 0;
+    top: 20px;
+    bottom: 20px; }
+  .mdl-selectfield__icon.is-invalid .mdl-selectfield__icon {
     color: rgb(222, 50, 38); }
