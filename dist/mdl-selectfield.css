@@ -167,9 +167,6 @@
 /* Shadows */
 /* Animations */
 /* Dialog */
-body .mdl-selectfield .mdl-selectfield__label {
-  line-height: 27px; }
-
 .mdl-selectfield {
   position: relative;
   font-size: 16px;
@@ -221,12 +218,9 @@ body .mdl-selectfield .mdl-selectfield__label {
   bottom: 0;
   color: rgba(0,0,0, 0.26);
   font-size: 16px;
-  left: 0;
-  right: 0;
   pointer-events: none;
   position: absolute;
   display: block;
-  top: 0;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -280,12 +274,10 @@ body .mdl-selectfield .mdl-selectfield__label {
     visibility: visible; }
 
 .mdl-selectfield__icon {
-  bottom: 0;
   cursor: pointer;
   color: rgba(0,0,0, 0.26);
   padding: 0;
   position: absolute;
-  top: 0;
   right: 0;
   pointer-events: none; }
   .mdl-selectfield__icon > i {
