@@ -174,8 +174,11 @@
   box-sizing: border-box;
   width: 300px;
   max-width: 100%;
-  margin: 0;
-  padding: 20px 0; }
+  margin: 20px 0;
+  padding: 0; }
+  .mdl-selectfield.mdl-selectfield--floating-label {
+    padding: 20px 0;
+    margin: 0; }
 
 .mdl-selectfield--align-right {
   text-align: right; }
@@ -215,12 +218,9 @@
   bottom: 0;
   color: rgba(0,0,0, 0.26);
   font-size: 16px;
-  left: 0;
-  right: 0;
   pointer-events: none;
   position: absolute;
   display: block;
-  top: 24px;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -229,7 +229,8 @@
     visibility: hidden; }
   .mdl-selectfield--floating-label .mdl-selectfield__label {
     transition-duration: 0.2s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    top: 24px; }
   fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
   .mdl-selectfield.is-disabled.is-disabled .mdl-selectfield__label {
     color: rgba(0,0,0, 0.26); }
@@ -244,7 +245,7 @@
     font-size: 12px; }
   .mdl-selectfield__label:after {
     background-color: rgb(63,81,181);
-    bottom: 20px;
+    bottom: 0;
     content: '';
     height: 2px;
     left: 45%;
@@ -253,6 +254,8 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     visibility: hidden;
     width: 10px; }
+  .mdl-selectfield--floating-label .mdl-selectfield__label:after {
+    bottom: 20px; }
   .mdl-selectfield.is-focused .mdl-selectfield__label:after {
     left: 0;
     visibility: visible;
@@ -271,12 +274,11 @@
     visibility: visible; }
 
 .mdl-selectfield__icon {
-  bottom: 20px;
   cursor: pointer;
   color: rgba(0,0,0, 0.26);
-  padding: 4px 0;
+  padding: 0;
   position: absolute;
-  top: 20px;
+  top: 0;
   right: 0;
   pointer-events: none; }
   .mdl-selectfield__icon > i {
@@ -286,5 +288,9 @@
   fieldset[disabled] .mdl-selectfield .mdl-selectfield__icon,
   .mdl-selectfield.is-disabled.is-disabled .mdl-selectfield__icon {
     color: rgba(0,0,0, 0.26); }
-  .mdl-selectfield--floating-label.is-invalid .mdl-selectfield__icon {
+  .mdl-selectfield--floating-label .mdl-selectfield__icon {
+    padding: 4px 0;
+    top: 20px;
+    bottom: 20px; }
+  .mdl-selectfield__icon.is-invalid .mdl-selectfield__icon {
     color: rgb(222, 50, 38); }
