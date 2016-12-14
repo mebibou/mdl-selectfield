@@ -166,6 +166,7 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   color: $selectfield-label-color;
   padding: 0;
   position: absolute;
+  top: 0;
   right: 0;
   pointer-events: none;
 

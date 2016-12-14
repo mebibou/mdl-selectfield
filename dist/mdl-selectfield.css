@@ -278,6 +278,7 @@
   color: rgba(0,0,0, 0.26);
   padding: 0;
   position: absolute;
+  top: 0;
   right: 0;
   pointer-events: none; }
   .mdl-selectfield__icon > i {
