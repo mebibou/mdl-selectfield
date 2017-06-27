@@ -1,0 +1,13 @@
+$selectfield-font-size: 16px !default;
+$selectfield-padding: 4px !default;
+$selectfield-vertical-spacing: 20px !default;
+
+$selectfield-floating-label-fontsize: 12px !default;
+
+$selectfield-background-color: transparent !default;
+$selectfield-label-color: unquote("rgba(#{$color-black}, 0.26)") !default;
+$selectfield-bottom-border-color: unquote("rgba(#{$color-black}, 0.12)") !default;
+$selectfield-highlight-color: unquote("rgb(#{$color-primary})") !default;
+$selectfield-disabled-color: $selectfield-bottom-border-color !default;
+$selectfield-disabled-text-color: $selectfield-label-color !default;
+$selectfield-error-color: unquote("rgb(222, 50, 38)") !default;

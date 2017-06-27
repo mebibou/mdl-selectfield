@@ -38,6 +38,18 @@ Then include in your html:
 <script src="./bower_components/mdl-selectfield/dist/mdl-selectfield.min.js"></script>
 ````
 
+Alternatively you may import the following published scss files in your build pipeline for extending the variables.
+ 
+````
+dist/scss/selectfield/_variables.scss
+                      _selectfield.scss
+````
+
+OR just 
+````
+dist/scss/selectfield/mdl-selectfield.scss
+````
+
 ## Basic use
 To use any MDL component, you must include the minified CSS and JavaScript files using standard relative-path references in the `<head>` section of the page, as described in the MDL Introduction.
 
