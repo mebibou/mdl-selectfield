@@ -35,7 +35,7 @@
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialSelectfield.prototype.onFocus_ = function(event) {
+  MaterialSelectfield.prototype.onFocus_ = function() {
     this.element_.classList.add(this.CssClasses_.IS_FOCUSED);
   };
 
@@ -45,8 +45,18 @@
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialSelectfield.prototype.onBlur_ = function(event) {
+  MaterialSelectfield.prototype.onBlur_ = function() {
     this.element_.classList.remove(this.CssClasses_.IS_FOCUSED);
+    this.checkValidity();
+  };
+
+  /**
+   * Handle change.
+   *
+   * @private
+   */
+  MaterialSelectfield.prototype.onChange_ = function() {
+    this.checkValidity();
   };
 
   /**
@@ -55,7 +65,7 @@
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialSelectfield.prototype.onReset_ = function(event) {
+  MaterialSelectfield.prototype.onReset_ = function() {
     this.updateClasses_();
   };
 
@@ -66,8 +76,17 @@
    */
   MaterialSelectfield.prototype.updateClasses_ = function() {
     this.checkDisabled();
-    this.checkValidity();
     this.checkDirty();
+    var dirty = this.element_.classList
+      .contains(this.CssClasses_.IS_DIRTY);
+    var required = this.select_.required;
+
+    if (!required ||
+      required && dirty) {
+      this.checkValidity();
+    }
+
+    this.checkFocus();
   };
 
   // Public methods.
@@ -87,15 +106,32 @@
   MaterialSelectfield.prototype['checkDisabled'] = MaterialSelectfield.prototype.checkDisabled;
 
   /**
+  * Check the focus state and update field accordingly.
+  *
+  * @public
+  */
+  MaterialSelectfield.prototype.checkFocus = function() {
+    if (Boolean(this.element_.querySelector(':focus'))) {
+      this.element_.classList.add(this.CssClasses_.IS_FOCUSED);
+    } else {
+      this.element_.classList.remove(this.CssClasses_.IS_FOCUSED);
+    }
+  };
+  MaterialSelectfield.prototype['checkFocus'] =
+    MaterialSelectfield.prototype.checkFocus;
+
+  /**
    * Check the validity state and update field accordingly.
    *
    * @public
    */
   MaterialSelectfield.prototype.checkValidity = function() {
-    if (this.select_.validity.valid) {
-      this.element_.classList.remove(this.CssClasses_.IS_INVALID);
-    } else {
-      this.element_.classList.add(this.CssClasses_.IS_INVALID);
+    if (this.select_.validity) {
+      if (this.select_.validity.valid) {
+        this.element_.classList.remove(this.CssClasses_.IS_INVALID);
+      } else {
+        this.element_.classList.add(this.CssClasses_.IS_INVALID);
+      }
     }
   };
   MaterialSelectfield.prototype['checkValidity'] = MaterialSelectfield.prototype.checkValidity;
@@ -133,6 +169,7 @@
   MaterialSelectfield.prototype.enable = function() {
     this.select_.disabled = false;
     this.updateClasses_();
+    this.checkValidity();
   };
   MaterialSelectfield.prototype['enable'] = MaterialSelectfield.prototype.enable;
 
@@ -143,9 +180,7 @@
    * @public
    */
   MaterialSelectfield.prototype.change = function(value) {
-    if (value) {
-      this.select_.value = value;
-    }
+    this.select_.value = value || '';
     this.updateClasses_();
   };
   MaterialSelectfield.prototype['change'] = MaterialSelectfield.prototype.change;
@@ -177,18 +212,6 @@
         }
       }
     }
-  };
-
-  /**
-   * Downgrade the component
-   *
-   * @private
-   */
-  MaterialSelectfield.prototype.mdlDowngrade_ = function() {
-    this.select_.removeEventListener('change', this.boundUpdateClassesHandler);
-    this.select_.removeEventListener('focus', this.boundFocusHandler);
-    this.select_.removeEventListener('blur', this.boundBlurHandler);
-    this.select_.removeEventListener('reset', this.boundResetHandler);
   };
 
   // The component registers itself. It can assume componentHandler is available
