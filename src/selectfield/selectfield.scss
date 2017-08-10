@@ -47,6 +47,7 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   border: none;
   border-bottom: 1px solid $selectfield-bottom-border-color;
   border-radius: 0;
+  outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
