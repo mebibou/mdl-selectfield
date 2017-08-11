@@ -47,6 +47,7 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   border: none;
   border-bottom: 1px solid $selectfield-bottom-border-color;
   border-radius: 0;
+  outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -105,7 +106,7 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   .mdl-selectfield--floating-label.is-focused &,
   .mdl-selectfield--floating-label.is-dirty & {
     color: $selectfield-highlight-color;
-    font-size : $selectfield-floating-label-fontsize;
+    font-size: $selectfield-floating-label-fontsize;
     top: $selectfield-vertical-spacing - ($selectfield-floating-label-fontsize + $selectfield-padding);
     visibility: visible;
   }
